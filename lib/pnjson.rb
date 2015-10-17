@@ -13,6 +13,8 @@ module Pnjson
       raw = File.open(filename).read
       hex_png = ascii_to_hex(raw)
 
+      raw.close
+
       raise Error::InvalidPng unless valid_png?(hex_png)
 
       @header = hex_png.shift(8).join
