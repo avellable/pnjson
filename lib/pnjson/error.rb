@@ -1,5 +1,5 @@
-module Error
-
-  class InvalidPng < StandardError; end
-
+module Pnjson
+  module Error
+    class InvalidPng < StandardError; end
+  end
 end

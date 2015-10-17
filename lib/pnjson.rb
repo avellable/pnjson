@@ -1,5 +1,5 @@
 require 'json'
-require 'pnjson/chunky'
+require 'pnjson/chunk'
 require 'pnjson/error'
 
 module Pnjson
@@ -13,7 +13,7 @@ module Pnjson
       raw = File.open(filename).read
       hex_png = ascii_to_hex(raw)
 
-      fail Pnjson::Error::InvalidPng unless valid_png?(hex_png)
+      raise Error::InvalidPng unless valid_png?(hex_png)
 
       @header = hex_png.shift(8).join
       @chunks = chunkify(hex_png)
