@@ -17,6 +17,15 @@ module Pnjson
       @crc    = options[:crc]
     end
 
+    def to_hash
+      {
+        length: @length,
+        type: @type,
+        data: @data,
+        crc: @crc
+      }
+    end
+
     private
     def hex_to_ascii(str)
       str.scan(/../).map { |x| x.hex.chr }.join

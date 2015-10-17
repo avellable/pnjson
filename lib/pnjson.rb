@@ -19,8 +19,8 @@ module Pnjson
       @chunks = chunkify(hex_png)
     end
 
-    def jsonify
-      self.to_json
+    def to_json
+      { header: @header, chunks: @chunks.map { |c| c.to_hash }  }.to_json
     end
 
     def valid_png?(hex_png)
