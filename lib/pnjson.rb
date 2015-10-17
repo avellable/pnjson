@@ -53,6 +53,7 @@ module Pnjson
     end
   end
 
+  module_function
   def open(filename)
     Pnjson.new(filename)
   end

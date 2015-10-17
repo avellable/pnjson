@@ -1,6 +1,16 @@
 # pnjson
-## A ruby gem to convert png images into json.
+A ruby gem to convert png images into json.
 
-## TODO
-* Update README.
-* Update unit tests.
+### Usage:
+
+```
+$ gem install pnjson
+```
+
+```ruby
+require 'pnjson'
+
+png = Pnjson.open('test.png')
+
+png.to_json
+```
