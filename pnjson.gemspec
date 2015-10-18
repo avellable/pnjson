@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.authors  = ['Mahesh Baheti']
   s.email    = ['mahsh.baheti@gmail.com']
-  s.homepage = 'http://www,github.com/avellable/pnjson'
+  s.homepage = 'http://www.github.com/avellable/pnjson'
   s.license  = 'MIT'
 
   s.add_development_dependency('rake')
