@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rspec', '~> 3')
 
   s.files = `git ls-files`.split($/)
-  s.test_files = s.files.grep(%r{^(test|spec|features)/})
+  s.test_files = s.files.grep(%r{^(test|spec|fixtures)/})
 end
